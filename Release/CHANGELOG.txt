@@ -1,0 +1,26 @@
+V1.3
+	-Added CMD+F shortcut to bring the search field into focus
+	
+10/04/06- V1.2
+	-Fixed a nil URL bug
+	-Added live (itunes-like) searching
+	-Some code cleanup/reorganization
+	-Added drag n' drop for adding additional search paths
+	-Added the sparkle update framework
+
+1/20/06- V1.1
+	-Book filtering
+	-Window position & size are saved
+	-Constraint on min left splitview width added
+	-The help window will appear automatically when XASH is 'clicked on' (activated)
+	-Groundwork is laid for live searching
+	-Fixed bug where nothing would appear in the left document outline
+	-Window title now represents what page you are currently viewing
+	-f7/f8 root help directory paths can now be specified by the preferences keys f7Path and f8Path
+	-You can specify additionally directorys to be searched for help files through the preference key additionalSearchPaths
+	-Redid the program structure (now their is only one .nib file containing all the objects)
+	-Added an application icon
+	-XASH is now a universal binary
+
+11/02/05- V1.0
+	-Initial release

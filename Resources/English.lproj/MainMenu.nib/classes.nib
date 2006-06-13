@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {
+            CLASS = ASHelpOutlineDataSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {oHelpTree = NSOutlineView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {setFilteredBook = id; setSearchStr = id; }; 
+            CLASS = FilterController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {oSearchField = NSSearchField; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {checkForUpdates = id; }; 
+            CLASS = SUUpdater; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {goToWebSite = id; openPreferences = id; setHelpPage = id; }; 
+            CLASS = XASHController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {oHelpTree = NSOutlineView; oHelpWindow = NSWindow; oWebView = WebView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = appControllerWrapper; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		27510B680912ADAF00CFA3D4 /* Package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 27510B860912ADD600CFA3D4 /* Build configuration list for PBXAggregateTarget "Package" */;
+			buildPhases = (
+				27510B670912ADAF00CFA3D4 /* Package */,
+				27510CBE09156BB500CFA3D4 /* Package Source */,
+			);
+			dependencies = (
+				27510B6A0912ADBF00CFA3D4 /* PBXTargetDependency */,
+			);
+			name = Package;
+			productName = Package;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2721158B09E988A100527EB1 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2721158A09E988A100527EB1 /* Sparkle.framework */; };
+		272115E509EA93F500527EB1 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2721158A09E988A100527EB1 /* Sparkle.framework */; };
+		2748806C0A3F006100C838C4 /* NSFileManager+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880680A3F006100C838C4 /* NSFileManager+Additions.m */; };
+		2748806E0A3F006100C838C4 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2748806A0A3F006100C838C4 /* NSString+Additions.m */; };
+		274880740A3F007100C838C4 /* DNDArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880700A3F007100C838C4 /* DNDArrayController.m */; };
+		274880760A3F007100C838C4 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880720A3F007100C838C4 /* PreferenceController.m */; };
+		274880970A3F010D00C838C4 /* ASHelpOutlineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880910A3F010D00C838C4 /* ASHelpOutlineDataSource.m */; };
+		274880990A3F010D00C838C4 /* FilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880930A3F010D00C838C4 /* FilterController.m */; };
+		2748809B0A3F010D00C838C4 /* XASHController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880950A3F010D00C838C4 /* XASHController.m */; };
+		274880BC0A3F017B00C838C4 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 274880B90A3F017B00C838C4 /* icon.icns */; };
+		274880BD0A3F017B00C838C4 /* Remove_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 274880BA0A3F017B00C838C4 /* Remove_Pressed.tiff */; };
+		274880BE0A3F017B00C838C4 /* Remove.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 274880BB0A3F017B00C838C4 /* Remove.tiff */; };
+		274880C20A3F023700C838C4 /* ASHelpXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880C00A3F023700C838C4 /* ASHelpXMLParser.m */; };
+		274880C60A3F024700C838C4 /* ASHelpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880C40A3F024700C838C4 /* ASHelpNode.m */; };
+		27990C7609E43452007F7D51 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 27990C7409E43452007F7D51 /* Preferences.nib */; };
+		27DDCDEA08E89FD8003A36C2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DDCDE908E89FD8003A36C2 /* WebKit.framework */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27510B690912ADBF00CFA3D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = XASH;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		272115E309EA93E100527EB1 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				272115E509EA93F500527EB1 /* Sparkle.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2721158A09E988A100527EB1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Source/Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		2721161909EA966100527EB1 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Release/TODO.txt; sourceTree = "<group>"; };
+		272505650945024C000181A9 /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = CHANGELOG.txt; path = Release/CHANGELOG.txt; sourceTree = "<group>"; };
+		274880670A3F006100C838C4 /* NSFileManager+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+Additions.h"; path = "Source/Categories/NSFileManager+Additions.h"; sourceTree = SOURCE_ROOT; };
+		274880680A3F006100C838C4 /* NSFileManager+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+Additions.m"; path = "Source/Categories/NSFileManager+Additions.m"; sourceTree = SOURCE_ROOT; };
+		274880690A3F006100C838C4 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "Source/Categories/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
+		2748806A0A3F006100C838C4 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "Source/Categories/NSString+Additions.m"; sourceTree = SOURCE_ROOT; };
+		2748806F0A3F007100C838C4 /* DNDArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNDArrayController.h; path = Source/Controller/DNDArrayController.h; sourceTree = SOURCE_ROOT; };
+		274880700A3F007100C838C4 /* DNDArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNDArrayController.m; path = Source/Controller/DNDArrayController.m; sourceTree = SOURCE_ROOT; };
+		274880710A3F007100C838C4 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferenceController.h; path = Source/Controller/PreferenceController.h; sourceTree = SOURCE_ROOT; };
+		274880720A3F007100C838C4 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferenceController.m; path = Source/Controller/PreferenceController.m; sourceTree = SOURCE_ROOT; };
+		2748807D0A3F007B00C838C4 /* shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shared.h; path = Source/shared.h; sourceTree = SOURCE_ROOT; };
+		274880900A3F010D00C838C4 /* ASHelpOutlineDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASHelpOutlineDataSource.h; path = Source/Controller/ASHelpOutlineDataSource.h; sourceTree = SOURCE_ROOT; };
+		274880910A3F010D00C838C4 /* ASHelpOutlineDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASHelpOutlineDataSource.m; path = Source/Controller/ASHelpOutlineDataSource.m; sourceTree = SOURCE_ROOT; };
+		274880920A3F010D00C838C4 /* FilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterController.h; path = Source/Controller/FilterController.h; sourceTree = SOURCE_ROOT; };
+		274880930A3F010D00C838C4 /* FilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterController.m; path = Source/Controller/FilterController.m; sourceTree = SOURCE_ROOT; };
+		274880940A3F010D00C838C4 /* XASHController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XASHController.h; path = Source/Controller/XASHController.h; sourceTree = SOURCE_ROOT; };
+		274880950A3F010D00C838C4 /* XASHController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XASHController.m; path = Source/Controller/XASHController.m; sourceTree = SOURCE_ROOT; };
+		274880B90A3F017B00C838C4 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = Resources/icons/icon.icns; sourceTree = SOURCE_ROOT; };
+		274880BA0A3F017B00C838C4 /* Remove_Pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Remove_Pressed.tiff; path = Resources/icons/Remove_Pressed.tiff; sourceTree = SOURCE_ROOT; };
+		274880BB0A3F017B00C838C4 /* Remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Remove.tiff; path = Resources/icons/Remove.tiff; sourceTree = SOURCE_ROOT; };
+		274880BF0A3F023700C838C4 /* ASHelpXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASHelpXMLParser.h; path = Source/Controller/ASHelpXMLParser.h; sourceTree = SOURCE_ROOT; };
+		274880C00A3F023700C838C4 /* ASHelpXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASHelpXMLParser.m; path = Source/Controller/ASHelpXMLParser.m; sourceTree = SOURCE_ROOT; };
+		274880C30A3F024700C838C4 /* ASHelpNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASHelpNode.h; path = Source/Model/ASHelpNode.h; sourceTree = SOURCE_ROOT; };
+		274880C40A3F024700C838C4 /* ASHelpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASHelpNode.m; path = Source/Model/ASHelpNode.m; sourceTree = SOURCE_ROOT; };
+		27990C7509E43452007F7D51 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = Resources/English.lproj/Preferences.nib; sourceTree = "<group>"; };
+		27DDCDE908E89FD8003A36C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = Resources/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* XASH_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XASH_Prefix.pch; path = Source/XASH_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* XASH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XASH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				27DDCDEA08E89FD8003A36C2 /* WebKit.framework in Frameworks */,
+				2721158B09E988A100527EB1 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				274880BF0A3F023700C838C4 /* ASHelpXMLParser.h */,
+				274880C00A3F023700C838C4 /* ASHelpXMLParser.m */,
+				274880900A3F010D00C838C4 /* ASHelpOutlineDataSource.h */,
+				274880910A3F010D00C838C4 /* ASHelpOutlineDataSource.m */,
+				274880920A3F010D00C838C4 /* FilterController.h */,
+				274880930A3F010D00C838C4 /* FilterController.m */,
+				274880940A3F010D00C838C4 /* XASHController.h */,
+				274880950A3F010D00C838C4 /* XASHController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* XASH.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		274880A10A3F012900C838C4 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				2721161909EA966100527EB1 /* TODO.txt */,
+				272505650945024C000181A9 /* CHANGELOG.txt */,
+			);
+			name = Release;
+			sourceTree = "<group>";
+		};
+		274880A80A3F016700C838C4 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				274880B90A3F017B00C838C4 /* icon.icns */,
+				274880BA0A3F017B00C838C4 /* Remove_Pressed.tiff */,
+				274880BB0A3F017B00C838C4 /* Remove.tiff */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		2749BEC708E9CCE100720241 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				274880C30A3F024700C838C4 /* ASHelpNode.h */,
+				274880C40A3F024700C838C4 /* ASHelpNode.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		27990D7909E448EB007F7D51 /* Preference Panel */ = {
+			isa = PBXGroup;
+			children = (
+				2748806F0A3F007100C838C4 /* DNDArrayController.h */,
+				274880700A3F007100C838C4 /* DNDArrayController.m */,
+				274880710A3F007100C838C4 /* PreferenceController.h */,
+				274880720A3F007100C838C4 /* PreferenceController.m */,
+			);
+			name = "Preference Panel";
+			sourceTree = "<group>";
+		};
+		27AF791D09E183A300568F5D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				274880670A3F006100C838C4 /* NSFileManager+Additions.h */,
+				274880680A3F006100C838C4 /* NSFileManager+Additions.m */,
+				274880690A3F006100C838C4 /* NSString+Additions.h */,
+				2748806A0A3F006100C838C4 /* NSString+Additions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* XASH */ = {
+			isa = PBXGroup;
+			children = (
+				274880A10A3F012900C838C4 /* Release */,
+				2748807D0A3F007B00C838C4 /* shared.h */,
+				27990D7909E448EB007F7D51 /* Preference Panel */,
+				27AF791D09E183A300568F5D /* Categories */,
+				2749BEC708E9CCE100720241 /* Model */,
+				080E96DDFE201D6D7F000001 /* Controllers */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = XASH;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* XASH_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				274880A80A3F016700C838C4 /* Icons */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				27990C7409E43452007F7D51 /* Preferences.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2721158A09E988A100527EB1 /* Sparkle.framework */,
+				27DDCDE908E89FD8003A36C2 /* WebKit.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* XASH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27DDC7FF08E6DD94003A36C2 /* Build configuration list for PBXNativeTarget "XASH" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				272115E309EA93E100527EB1 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XASH;
+			productInstallPath = "$(HOME)/Applications";
+			productName = XASH;
+			productReference = 8D1107320486CEB800E47090 /* XASH.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 27DDC80308E6DD94003A36C2 /* Build configuration list for PBXProject "XASH" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* XASH */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* XASH */,
+				27510B680912ADAF00CFA3D4 /* Package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				27990C7609E43452007F7D51 /* Preferences.nib in Resources */,
+				274880BC0A3F017B00C838C4 /* icon.icns in Resources */,
+				274880BD0A3F017B00C838C4 /* Remove_Pressed.tiff in Resources */,
+				274880BE0A3F017B00C838C4 /* Remove.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27510B670912ADAF00CFA3D4 /* Package */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Package;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "dir=~/Desktop/XASH #dir is the directory for all the zipped files to go\ntempDir=$dir/temp\nresrc=./resources/\n\nmkdir $dir\nmkdir $tempDir\n\n#cp all the build files into a temp dir to get rdy for zipping\ncp -R \"$BUILT_PRODUCTS_DIR/XASH.app\" $tempDir\ncp $resrc/TODO.txt $tempDir\ncp $resrc/CHANGELOG.txt $tempDir\n#cp $resrc/README.rtf $tempDir\ncp $resrc/license.txt $tempDir\n\n#finder zip equiv: http://www.macosxhints.com/article.php?story=20031223150348992\n#so zip up the binary with its other files\nditto -c -k -rsrc \\\n$tempDir \\\n$dir/xash.zip\n\nrm -R $tempDir\n\nexit 0";
+		};
+		27510CBE09156BB500CFA3D4 /* Package Source */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Package Source";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "dir=~/Desktop/XASH #dir is the directory for all the zipped files to go\n\nrm -R \"$BUILD_DIR\" #remove all the build stuff\n\n#finder zip equiv: http://www.macosxhints.com/article.php?story=20031223150348992\n#so zip up the binary with its other files\nditto -c -k -rsrc \\\n./ \\\n$dir/xash_source.zip\n\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2748806C0A3F006100C838C4 /* NSFileManager+Additions.m in Sources */,
+				2748806E0A3F006100C838C4 /* NSString+Additions.m in Sources */,
+				274880740A3F007100C838C4 /* DNDArrayController.m in Sources */,
+				274880760A3F007100C838C4 /* PreferenceController.m in Sources */,
+				274880970A3F010D00C838C4 /* ASHelpOutlineDataSource.m in Sources */,
+				274880990A3F010D00C838C4 /* FilterController.m in Sources */,
+				2748809B0A3F010D00C838C4 /* XASHController.m in Sources */,
+				274880C20A3F023700C838C4 /* ASHelpXMLParser.m in Sources */,
+				274880C60A3F024700C838C4 /* ASHelpNode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27510B6A0912ADBF00CFA3D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* XASH */;
+			targetProxy = 27510B690912ADBF00CFA3D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27990C7409E43452007F7D51 /* Preferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27990C7509E43452007F7D51 /* Preferences.nib */,
+			);
+			name = Preferences.nib;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27510B870912ADD600CFA3D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Package;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		27510B880912ADD600CFA3D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Package;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		27510B890912ADD600CFA3D4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Package;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		27DDC80008E6DD94003A36C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					Frameworks,
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = XASH_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = XASH;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		27DDC80108E6DD94003A36C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					Source/Frameworks,
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/XASH_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = XASH;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		27DDC80208E6DD94003A36C2 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					Frameworks,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = XASH_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = XASH;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		27DDC80408E6DD94003A36C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		27DDC80508E6DD94003A36C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		27DDC80608E6DD94003A36C2 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27510B860912ADD600CFA3D4 /* Build configuration list for PBXAggregateTarget "Package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27510B870912ADD600CFA3D4 /* Debug */,
+				27510B880912ADD600CFA3D4 /* Release */,
+				27510B890912ADD600CFA3D4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		27DDC7FF08E6DD94003A36C2 /* Build configuration list for PBXNativeTarget "XASH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27DDC80008E6DD94003A36C2 /* Debug */,
+				27DDC80108E6DD94003A36C2 /* Release */,
+				27DDC80208E6DD94003A36C2 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		27DDC80308E6DD94003A36C2 /* Build configuration list for PBXProject "XASH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27DDC80408E6DD94003A36C2 /* Debug */,
+				27DDC80508E6DD94003A36C2 /* Release */,
+				27DDC80608E6DD94003A36C2 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

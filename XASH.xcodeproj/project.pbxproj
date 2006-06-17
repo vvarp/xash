@@ -23,6 +23,17 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0D821E190A41B0C6004EF02D /* XASHButton.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0D821E150A41B0C6004EF02D /* XASHButton.h */; };
+		0D821E1A0A41B0C6004EF02D /* XASHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D821E160A41B0C6004EF02D /* XASHButton.m */; };
+		0D821E1B0A41B0C6004EF02D /* XASHSplitView.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0D821E170A41B0C6004EF02D /* XASHSplitView.h */; };
+		0D821E1C0A41B0C6004EF02D /* XASHSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D821E180A41B0C6004EF02D /* XASHSplitView.m */; };
+		0DE78DCB0A43A4BB00AEDCDE /* Back_Disabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DC40A43A4BB00AEDCDE /* Back_Disabled.tiff */; };
+		0DE78DCC0A43A4BB00AEDCDE /* Back_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DC50A43A4BB00AEDCDE /* Back_Pressed.tiff */; };
+		0DE78DCD0A43A4BB00AEDCDE /* Back.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DC60A43A4BB00AEDCDE /* Back.tiff */; };
+		0DE78DCE0A43A4BB00AEDCDE /* Forward_Disabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DC70A43A4BB00AEDCDE /* Forward_Disabled.tiff */; };
+		0DE78DCF0A43A4BB00AEDCDE /* Forward_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DC80A43A4BB00AEDCDE /* Forward_Pressed.tiff */; };
+		0DE78DD00A43A4BB00AEDCDE /* Forward.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DC90A43A4BB00AEDCDE /* Forward.tiff */; };
+		0DE78DD10A43A4BB00AEDCDE /* Split_Bar.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DCA0A43A4BB00AEDCDE /* Split_Bar.tiff */; };
 		2721158B09E988A100527EB1 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2721158A09E988A100527EB1 /* Sparkle.framework */; };
 		272115E509EA93F500527EB1 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2721158A09E988A100527EB1 /* Sparkle.framework */; };
 		2748806C0A3F006100C838C4 /* NSFileManager+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880680A3F006100C838C4 /* NSFileManager+Additions.m */; };
@@ -45,6 +56,23 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildStyle section */
+		0D821E020A41B058004EF02D /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Development;
+		};
+		0D821E030A41B058004EF02D /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
 /* Begin PBXContainerItemProxy section */
 		27510B690912ADBF00CFA3D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -63,6 +91,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				272115E509EA93F500527EB1 /* Sparkle.framework in Copy Frameworks */,
+				0D821E190A41B0C6004EF02D /* XASHButton.h in Copy Frameworks */,
+				0D821E1B0A41B0C6004EF02D /* XASHSplitView.h in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +101,17 @@
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0D821E150A41B0C6004EF02D /* XASHButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = XASHButton.h; path = Source/View/XASHButton.h; sourceTree = "<group>"; };
+		0D821E160A41B0C6004EF02D /* XASHButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = XASHButton.m; path = Source/View/XASHButton.m; sourceTree = "<group>"; };
+		0D821E170A41B0C6004EF02D /* XASHSplitView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = XASHSplitView.h; path = Source/View/XASHSplitView.h; sourceTree = "<group>"; };
+		0D821E180A41B0C6004EF02D /* XASHSplitView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = XASHSplitView.m; path = Source/View/XASHSplitView.m; sourceTree = "<group>"; };
+		0DE78DC40A43A4BB00AEDCDE /* Back_Disabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Back_Disabled.tiff; path = Resources/icons/Back_Disabled.tiff; sourceTree = "<group>"; };
+		0DE78DC50A43A4BB00AEDCDE /* Back_Pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Back_Pressed.tiff; path = Resources/icons/Back_Pressed.tiff; sourceTree = "<group>"; };
+		0DE78DC60A43A4BB00AEDCDE /* Back.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Back.tiff; path = Resources/icons/Back.tiff; sourceTree = "<group>"; };
+		0DE78DC70A43A4BB00AEDCDE /* Forward_Disabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Forward_Disabled.tiff; path = Resources/icons/Forward_Disabled.tiff; sourceTree = "<group>"; };
+		0DE78DC80A43A4BB00AEDCDE /* Forward_Pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Forward_Pressed.tiff; path = Resources/icons/Forward_Pressed.tiff; sourceTree = "<group>"; };
+		0DE78DC90A43A4BB00AEDCDE /* Forward.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Forward.tiff; path = Resources/icons/Forward.tiff; sourceTree = "<group>"; };
+		0DE78DCA0A43A4BB00AEDCDE /* Split_Bar.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Split_Bar.tiff; path = Resources/icons/Split_Bar.tiff; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		2721158A09E988A100527EB1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Source/Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		2721161909EA966100527EB1 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Release/TODO.txt; sourceTree = "<group>"; };
@@ -135,6 +176,17 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		0D821E110A41B08C004EF02D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D821E150A41B0C6004EF02D /* XASHButton.h */,
+				0D821E160A41B0C6004EF02D /* XASHButton.m */,
+				0D821E170A41B0C6004EF02D /* XASHSplitView.h */,
+				0D821E180A41B0C6004EF02D /* XASHSplitView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +207,13 @@
 		274880A80A3F016700C838C4 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				0DE78DC40A43A4BB00AEDCDE /* Back_Disabled.tiff */,
+				0DE78DC50A43A4BB00AEDCDE /* Back_Pressed.tiff */,
+				0DE78DC60A43A4BB00AEDCDE /* Back.tiff */,
+				0DE78DC70A43A4BB00AEDCDE /* Forward_Disabled.tiff */,
+				0DE78DC80A43A4BB00AEDCDE /* Forward_Pressed.tiff */,
+				0DE78DC90A43A4BB00AEDCDE /* Forward.tiff */,
+				0DE78DCA0A43A4BB00AEDCDE /* Split_Bar.tiff */,
 				274880B90A3F017B00C838C4 /* icon.icns */,
 				274880BA0A3F017B00C838C4 /* Remove_Pressed.tiff */,
 				274880BB0A3F017B00C838C4 /* Remove.tiff */,
@@ -202,6 +261,7 @@
 				27AF791D09E183A300568F5D /* Categories */,
 				2749BEC708E9CCE100720241 /* Model */,
 				080E96DDFE201D6D7F000001 /* Controllers */,
+				0D821E110A41B08C004EF02D /* View */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -269,6 +329,12 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 27DDC80308E6DD94003A36C2 /* Build configuration list for PBXProject "XASH" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				0D821E020A41B058004EF02D /* Development */,
+				0D821E030A41B058004EF02D /* Deployment */,
+			);
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* XASH */;
 			projectDirPath = "";
@@ -290,6 +356,13 @@
 				274880BC0A3F017B00C838C4 /* icon.icns in Resources */,
 				274880BD0A3F017B00C838C4 /* Remove_Pressed.tiff in Resources */,
 				274880BE0A3F017B00C838C4 /* Remove.tiff in Resources */,
+				0DE78DCB0A43A4BB00AEDCDE /* Back_Disabled.tiff in Resources */,
+				0DE78DCC0A43A4BB00AEDCDE /* Back_Pressed.tiff in Resources */,
+				0DE78DCD0A43A4BB00AEDCDE /* Back.tiff in Resources */,
+				0DE78DCE0A43A4BB00AEDCDE /* Forward_Disabled.tiff in Resources */,
+				0DE78DCF0A43A4BB00AEDCDE /* Forward_Pressed.tiff in Resources */,
+				0DE78DD00A43A4BB00AEDCDE /* Forward.tiff in Resources */,
+				0DE78DD10A43A4BB00AEDCDE /* Split_Bar.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +414,8 @@
 				2748809B0A3F010D00C838C4 /* XASHController.m in Sources */,
 				274880C20A3F023700C838C4 /* ASHelpXMLParser.m in Sources */,
 				274880C60A3F024700C838C4 /* ASHelpNode.m in Sources */,
+				0D821E1A0A41B0C6004EF02D /* XASHButton.m in Sources */,
+				0D821E1C0A41B0C6004EF02D /* XASHSplitView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,10 +525,10 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = XASH_Prefix.pch;
+				GCC_PREFIX_HEADER = Source/XASH_Prefix.pch;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PREBINDING = NO;
 				PRODUCT_NAME = XASH;
@@ -494,15 +569,16 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
-					Frameworks,
+					Source/Frameworks,
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = XASH_Prefix.pch;
+				GCC_PREFIX_HEADER = Source/XASH_Prefix.pch;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
 				PRODUCT_NAME = XASH;
 				WRAPPER_EXTENSION = app;
 			};

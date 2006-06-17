@@ -37,7 +37,7 @@
 #define ADD_XML_FILE(x) \
 [[[ASHelpXMLParser alloc] initWithASXMLFile:x withRootNode:[[ASHelpOutlineDataSource sharedSource] rootNode]] autorelease]
 
-@class WebView, WebFrame, PreferenceController;
+@class WebView, WebFrame, PreferenceController, XASHButton;
 
 @interface XASHController : NSObject {
 	NSString *_helpPath, *_helpIndex;
@@ -45,6 +45,11 @@
 	IBOutlet NSOutlineView *oHelpTree;
 	IBOutlet WebView *oWebView;
 	IBOutlet NSWindow *oHelpWindow;
+	IBOutlet NSSearchField *oSearchField;
+	IBOutlet NSView *oSearchView;
+	IBOutlet NSView *oNavView;
+	IBOutlet XASHButton *oBackBtn;
+	IBOutlet XASHButton *oForwardBtn;
 	
 	NSArray *_allHelpPages;
 	PreferenceController *_preferenceController;
@@ -66,6 +71,7 @@
 -(IBAction) setHelpPage:(id)sender;
 -(IBAction) goToWebSite:(id)sender;
 -(IBAction) openPreferences:(id)sender;
+-(IBAction) selectSearchField:(id)sender;
 
 //----------------------------
 //		Getter & Setter
@@ -81,8 +87,21 @@
 - (void)webView:(WebView *)sender didStartProvisionalLoadForFrame:(WebFrame *)frame;
 - (void)webView:(WebView *)sender didReceiveTitle:(NSString *)title forFrame:(WebFrame *)frame;
 - (void)webView:(WebView *)sender didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame;
+- (void)webView:(WebView *)sender decidePolicyForNewWindowAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request newFrameName:(NSString *)frameName decisionListener:(id)listener;
 
 //delegate methods for the splitview
 - (float)splitView:(NSSplitView *)sender constrainMinCoordinate:(float)proposedMin ofSubviewAt:(int)offset;
-//- (void)splitView:(NSSplitView *)sender resizeSubviewsWithOldSize:(NSSize)oldSize;
+- (void)splitView:(NSSplitView *)sender resizeSubviewsWithOldSize:(NSSize)oldSize;
+
+//----------------------------
+//	 Toolbar Methods
+//----------------------------
+
+- (void)setupToolbar;
+- (NSToolbarItem *)toolbar:(NSToolbar *)toolbar
+itemForItemIdentifier:(NSString *)itemIdentifier
+willBeInsertedIntoToolbar:(BOOL)flag;
+- (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar;
+- (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar;
+
 @end

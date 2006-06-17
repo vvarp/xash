@@ -20,13 +20,29 @@
             LANGUAGE = ObjC; 
             SUPERCLASS = NSObject; 
         }, 
+        {CLASS = XASHButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
         {
-            ACTIONS = {goToWebSite = id; openPreferences = id; setHelpPage = id; }; 
+            ACTIONS = {
+                goToWebSite = id; 
+                openPreferences = id; 
+                selectSearchField = id; 
+                setHelpPage = id; 
+            }; 
             CLASS = XASHController; 
             LANGUAGE = ObjC; 
-            OUTLETS = {oHelpTree = NSOutlineView; oHelpWindow = NSWindow; oWebView = WebView; }; 
+            OUTLETS = {
+                oBackBtn = XASHButton; 
+                oForwardBtn = XASHButton; 
+                oHelpTree = NSOutlineView; 
+                oHelpWindow = NSWindow; 
+                oNavView = NSView; 
+                oSearchField = NSSearchField; 
+                oSearchView = NSView; 
+                oWebView = WebView; 
+            }; 
             SUPERCLASS = NSObject; 
         }, 
+        {CLASS = XASHSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
         {CLASS = appControllerWrapper; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
     ); 
     IBVersion = 1; 

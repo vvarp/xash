@@ -148,6 +148,8 @@ static XASHController *_sharedController;
 	[[oWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_helpIndex]]];
 	[[FilterController sharedFilter] reloadData];
 	[oHelpTree reloadData];
+	
+	[self setupToolbar];
 }
 
 -(void) appDidBecomeActive:(NSNotification *)note {
@@ -161,7 +163,7 @@ static XASHController *_sharedController;
 -(IBAction) setHelpPage:(id)sender {
 	if(!isEmpty([(ASHelpNode*)[oHelpTree itemAtRow:[oHelpTree selectedRow]] helpPage])) {
 #if DEBUG
-		NSLog(@"Nil URL selected")
+		NSLog(@"Nil URL selected");
 #endif
 		[[oWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[(ASHelpNode*)[oHelpTree itemAtRow:[oHelpTree selectedRow]] helpPage]]]];
 	}
@@ -177,6 +179,14 @@ static XASHController *_sharedController;
 	}
 
 	[_preferenceController showWindow:self];
+}
+
+-(IBAction) selectSearchField:(id)sender {
+	NSToolbar *toolbar = [[NSApp mainWindow] toolbar];
+	if(![toolbar isVisible]) {
+		[toolbar setVisible:YES];
+	}
+	[oSearchField selectText:self];
 }
 
 //----------------------------
@@ -230,6 +240,20 @@ static XASHController *_sharedController;
 	[oHelpTree selectRow:[oHelpTree rowForItem:targetNode] byExtendingSelection:NO];
 }
 
+- (void)webView:(WebView *)sender didCommitLoadForFrame:(WebFrame *)frame {
+	if([sender canGoBack]) {
+		[oBackBtn setEnabled:YES];
+	} else {
+		[oBackBtn setEnabled:NO];
+	}
+	
+	if([sender canGoForward]) {
+		[oForwardBtn setEnabled:YES];
+	} else {
+		[oForwardBtn setEnabled:NO];
+	}
+}
+
 - (void)webView:(WebView *)sender didReceiveTitle:(NSString *)title forFrame:(WebFrame *)frame {
 	[oHelpWindow setTitle:[NSString stringWithFormat:@"%@ : %@", BASE_WIN_TITLE, title]];
 }
@@ -240,6 +264,11 @@ static XASHController *_sharedController;
 #endif
 }
 
+- (void)webView:(WebView *)sender decidePolicyForNewWindowAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request newFrameName:(NSString *)frameName decisionListener:(id)listener {
+	OPEN_URL([[request URL] absoluteString]);
+	[listener ignore];
+}
+
 //delegate method for the split view, gives a minimum width to the outline view
 - (float)splitView:(NSSplitView *)sender constrainMinCoordinate:(float)proposedMin ofSubviewAt:(int)offset {
 	if(offset == 0) {
@@ -248,4 +277,79 @@ static XASHController *_sharedController;
 		return 0; //this never happens so....
 	}
 }
+
+- (void)splitView:(NSSplitView *)sender resizeSubviewsWithOldSize:(NSSize)oldSize
+{
+    // how to resize a horizontal split view so that the left frame stays a constant size
+    NSView *left = [[sender subviews] objectAtIndex:0];      // get the two sub views
+    NSView *right = [[sender subviews] objectAtIndex:1];
+    float dividerThickness = [sender dividerThickness];         // and the divider thickness
+    NSRect newFrame = [sender frame];                           // get the new size of the whole splitView
+    NSRect leftFrame = [left frame];                            // current size of the left subview
+    NSRect rightFrame = [right frame];                          // ...and the right
+    leftFrame.size.height = newFrame.size.height;               // resize the height of the left
+    leftFrame.origin = NSMakePoint(0,0);                        // don't think this is needed
+	leftFrame.size.width = MIN(leftFrame.size.width, newFrame.size.width - dividerThickness);
+     // the rest of the width...
+    rightFrame.size.width = newFrame.size.width - leftFrame.size.width - dividerThickness;
+    rightFrame.size.height = newFrame.size.height;              // the whole height
+    rightFrame.origin.x = leftFrame.size.width + dividerThickness;
+    [left setFrame:leftFrame];
+    [right setFrame:rightFrame];
+}
+
+//----------------------------
+//		Toolbar Methods
+//----------------------------
+
+- (void)setupToolbar
+{
+	NSToolbar *toolbar = [[NSToolbar alloc] initWithIdentifier:@"mainToolbar"];
+	[toolbar setDelegate:self];
+	[toolbar setAllowsUserCustomization:YES];
+	[toolbar setAutosavesConfiguration:YES];
+	[oHelpWindow setToolbar:[toolbar autorelease]];
+}
+- (NSToolbarItem *)toolbar:(NSToolbar *)toolbar
+	itemForItemIdentifier:(NSString *)itemIdentifier
+	willBeInsertedIntoToolbar:(BOOL)flag
+{
+	NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
+	
+	if ([itemIdentifier isEqualToString:@"NavItem"]) {
+		[item setLabel:@"Back/Forward"];
+		[item setPaletteLabel:[item label]];
+		[item setView:oNavView];
+		
+		NSRect fRect = [oNavView frame];
+		[item setMinSize:fRect.size];
+		[item setMaxSize:fRect.size];
+	} else if ([itemIdentifier isEqualToString:@"SearchItem"]) {
+		[item setLabel:@"Search"];
+		[item setPaletteLabel:[item label]];
+		[item setView:oSearchView];
+		
+		NSRect fRect = [oSearchView frame];
+		[item setMinSize:fRect.size];
+		[item setMaxSize:fRect.size];
+	}
+	
+	return [item autorelease];
+}
+- (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar
+{
+	return [NSArray arrayWithObjects:NSToolbarSeparatorItemIdentifier,
+				    NSToolbarSpaceItemIdentifier,
+				    NSToolbarFlexibleSpaceItemIdentifier,
+				    NSToolbarCustomizeToolbarItemIdentifier, 
+				    @"AddItem", @"RemoveItem", @"SearchItem", nil];
+}
+- (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar
+{
+	return [NSArray arrayWithObjects:@"SearchItem",
+					@"NavItem",
+					NSToolbarFlexibleSpaceItemIdentifier,
+					nil];
+}
+
 @end

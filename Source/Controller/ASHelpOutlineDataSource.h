@@ -51,4 +51,10 @@
 -(BOOL) outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item;
 -(int) outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item;
 -(id) outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item;
+
+//----------------------------
+//		Delegate Methods
+//----------------------------
+- (void)outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item;
+
 @end

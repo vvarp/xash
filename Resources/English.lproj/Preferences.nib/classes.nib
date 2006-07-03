@@ -13,8 +13,10 @@
             SUPERCLASS = NSObject; 
         }, 
         {
+            ACTIONS = {addPreferencePath = id; }; 
             CLASS = PreferenceController; 
             LANGUAGE = ObjC; 
+            OUTLETS = {oDNDController = NSArrayController; }; 
             SUPERCLASS = NSWindowController; 
         }
     ); 

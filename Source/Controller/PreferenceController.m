@@ -9,35 +9,23 @@
 #import "PreferenceController.h"
 
 @implementation PreferenceController
-/*
--(unsigned int) draggingEntered:(id <NSDraggingInfo>)sender {
-	NSLog(@"Drag entered");
-	//if(([sender draggingSourceOperationMask] & NSDragOperationCopy) == NSDragOperationCopy) {//How to mask for drag operations
-	if([[sender draggingPasteboard] availableTypeFromArray:[NSArray arrayWithObject:NSFilenamesPboardType]] != nil) {
-		return NSDragOperationCopy;
-	}
-	
-	return NSDragOperationNone;
+- (IBAction) addPreferencePath:(id) sender {
+	NSOpenPanel *panel = [NSOpenPanel openPanel];
+	[panel setCanChooseFiles:NO];
+	[panel setCanChooseDirectories:YES];
+	[panel setAllowsMultipleSelection:NO];
+	[panel setTitle:@"Add Additional Search Path"];
+	[panel beginSheetForDirectory:nil
+							 file:nil
+							types:nil
+				   modalForWindow:[self window]
+					modalDelegate:self
+				   didEndSelector:@selector(openPanelDidEnd:returnCode:contextInfo:)
+					  contextInfo:nil];
 }
 
--(BOOL)prepareForDragOperation:(id <NSDraggingInfo>)sender {
-	NSString *tempPath = [NSString stringWithString:[[[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType] objectAtIndex:0]];
-	NSString *ext = [tempPath pathExtension];
-	return YES;
+- (void) openPanelDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode  contextInfo:(void  *)contextInfo {
+	NSLog(@"%@", [[panel URL] path]);
+	[oDNDController addObject:[NSMutableDictionary dictionaryWithObject:[[panel URL] path] forKey:PATH_KEY]];
 }
-
--(BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
-	NSLog(@"Perform Drag: %@", [[[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType] objectAtIndex:0]);
-	//[self setStringValue:[[[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType] objectAtIndex:0]];
-	return YES;
-}
-
--(void)concludeDragOperation:(id <NSDraggingInfo>)sender {
-	NSLog(@"Conclude");
-}
-
--(void) draggingExited:(id <NSDraggingInfo>)sender {
-	NSLog(@"exit");
-}
-*/
 @end

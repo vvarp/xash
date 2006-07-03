@@ -44,34 +44,17 @@
 		274880990A3F010D00C838C4 /* FilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880930A3F010D00C838C4 /* FilterController.m */; };
 		2748809B0A3F010D00C838C4 /* XASHController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880950A3F010D00C838C4 /* XASHController.m */; };
 		274880BC0A3F017B00C838C4 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 274880B90A3F017B00C838C4 /* icon.icns */; };
-		274880BD0A3F017B00C838C4 /* Remove_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 274880BA0A3F017B00C838C4 /* Remove_Pressed.tiff */; };
-		274880BE0A3F017B00C838C4 /* Remove.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 274880BB0A3F017B00C838C4 /* Remove.tiff */; };
 		274880C20A3F023700C838C4 /* ASHelpXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880C00A3F023700C838C4 /* ASHelpXMLParser.m */; };
 		274880C60A3F024700C838C4 /* ASHelpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880C40A3F024700C838C4 /* ASHelpNode.m */; };
 		27990C7609E43452007F7D51 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 27990C7409E43452007F7D51 /* Preferences.nib */; };
 		27DDCDEA08E89FD8003A36C2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DDCDE908E89FD8003A36C2 /* WebKit.framework */; };
+		27F1A6F70A449D9A008212CE /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F1A6F50A449D9A008212CE /* Add.png */; };
+		27F1A6F80A449D9A008212CE /* Remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F1A6F60A449D9A008212CE /* Remove.png */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		0D821E020A41B058004EF02D /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Development;
-		};
-		0D821E030A41B058004EF02D /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
 		27510B690912ADBF00CFA3D4 /* PBXContainerItemProxy */ = {
@@ -132,14 +115,14 @@
 		274880940A3F010D00C838C4 /* XASHController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XASHController.h; path = Source/Controller/XASHController.h; sourceTree = SOURCE_ROOT; };
 		274880950A3F010D00C838C4 /* XASHController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XASHController.m; path = Source/Controller/XASHController.m; sourceTree = SOURCE_ROOT; };
 		274880B90A3F017B00C838C4 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = Resources/icons/icon.icns; sourceTree = SOURCE_ROOT; };
-		274880BA0A3F017B00C838C4 /* Remove_Pressed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Remove_Pressed.tiff; path = Resources/icons/Remove_Pressed.tiff; sourceTree = SOURCE_ROOT; };
-		274880BB0A3F017B00C838C4 /* Remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Remove.tiff; path = Resources/icons/Remove.tiff; sourceTree = SOURCE_ROOT; };
 		274880BF0A3F023700C838C4 /* ASHelpXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASHelpXMLParser.h; path = Source/Controller/ASHelpXMLParser.h; sourceTree = SOURCE_ROOT; };
 		274880C00A3F023700C838C4 /* ASHelpXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASHelpXMLParser.m; path = Source/Controller/ASHelpXMLParser.m; sourceTree = SOURCE_ROOT; };
 		274880C30A3F024700C838C4 /* ASHelpNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASHelpNode.h; path = Source/Model/ASHelpNode.h; sourceTree = SOURCE_ROOT; };
 		274880C40A3F024700C838C4 /* ASHelpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASHelpNode.m; path = Source/Model/ASHelpNode.m; sourceTree = SOURCE_ROOT; };
 		27990C7509E43452007F7D51 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = Resources/English.lproj/Preferences.nib; sourceTree = "<group>"; };
 		27DDCDE908E89FD8003A36C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		27F1A6F50A449D9A008212CE /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Add.png; path = Resources/icons/Add.png; sourceTree = SOURCE_ROOT; };
+		27F1A6F60A449D9A008212CE /* Remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Remove.png; path = Resources/icons/Remove.png; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = Resources/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* XASH_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XASH_Prefix.pch; path = Source/XASH_Prefix.pch; sourceTree = "<group>"; };
@@ -207,6 +190,8 @@
 		274880A80A3F016700C838C4 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				27F1A6F50A449D9A008212CE /* Add.png */,
+				27F1A6F60A449D9A008212CE /* Remove.png */,
 				0DE78DC40A43A4BB00AEDCDE /* Back_Disabled.tiff */,
 				0DE78DC50A43A4BB00AEDCDE /* Back_Pressed.tiff */,
 				0DE78DC60A43A4BB00AEDCDE /* Back.tiff */,
@@ -215,8 +200,6 @@
 				0DE78DC90A43A4BB00AEDCDE /* Forward.tiff */,
 				0DE78DCA0A43A4BB00AEDCDE /* Split_Bar.tiff */,
 				274880B90A3F017B00C838C4 /* icon.icns */,
-				274880BA0A3F017B00C838C4 /* Remove_Pressed.tiff */,
-				274880BB0A3F017B00C838C4 /* Remove.tiff */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -329,12 +312,6 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 27DDC80308E6DD94003A36C2 /* Build configuration list for PBXProject "XASH" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				0D821E020A41B058004EF02D /* Development */,
-				0D821E030A41B058004EF02D /* Deployment */,
-			);
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* XASH */;
 			projectDirPath = "";
@@ -354,8 +331,6 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				27990C7609E43452007F7D51 /* Preferences.nib in Resources */,
 				274880BC0A3F017B00C838C4 /* icon.icns in Resources */,
-				274880BD0A3F017B00C838C4 /* Remove_Pressed.tiff in Resources */,
-				274880BE0A3F017B00C838C4 /* Remove.tiff in Resources */,
 				0DE78DCB0A43A4BB00AEDCDE /* Back_Disabled.tiff in Resources */,
 				0DE78DCC0A43A4BB00AEDCDE /* Back_Pressed.tiff in Resources */,
 				0DE78DCD0A43A4BB00AEDCDE /* Back.tiff in Resources */,
@@ -363,6 +338,8 @@
 				0DE78DCF0A43A4BB00AEDCDE /* Forward_Pressed.tiff in Resources */,
 				0DE78DD00A43A4BB00AEDCDE /* Forward.tiff in Resources */,
 				0DE78DD10A43A4BB00AEDCDE /* Split_Bar.tiff in Resources */,
+				27F1A6F70A449D9A008212CE /* Add.png in Resources */,
+				27F1A6F80A449D9A008212CE /* Remove.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +495,7 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
-					Frameworks,
+					Source/Frameworks,
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;

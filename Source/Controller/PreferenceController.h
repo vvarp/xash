@@ -21,5 +21,10 @@
 
 #define PATH_KEY @"path"
 
-@interface PreferenceController : NSWindowController {}
+@interface PreferenceController : NSWindowController {
+	IBOutlet NSArrayController *oDNDController;
+}
+
+- (IBAction) addPreferencePath:(id) sender;
+- (void) openPanelDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
 @end

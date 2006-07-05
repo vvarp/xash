@@ -25,7 +25,6 @@
 }
 
 - (void) openPanelDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode  contextInfo:(void  *)contextInfo {
-	NSLog(@"%@", [[panel URL] path]);
 	[oDNDController addObject:[NSMutableDictionary dictionaryWithObject:[[panel URL] path] forKey:PATH_KEY]];
 }
 @end

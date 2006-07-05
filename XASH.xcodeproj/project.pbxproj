@@ -36,6 +36,7 @@
 		0DE78DD10A43A4BB00AEDCDE /* Split_Bar.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DCA0A43A4BB00AEDCDE /* Split_Bar.tiff */; };
 		2721158B09E988A100527EB1 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2721158A09E988A100527EB1 /* Sparkle.framework */; };
 		272115E509EA93F500527EB1 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2721158A09E988A100527EB1 /* Sparkle.framework */; };
+		272450480A5B60B300F716B5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 272450470A5B60B300F716B5 /* Credits.rtf */; };
 		2748806C0A3F006100C838C4 /* NSFileManager+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880680A3F006100C838C4 /* NSFileManager+Additions.m */; };
 		2748806E0A3F006100C838C4 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2748806A0A3F006100C838C4 /* NSString+Additions.m */; };
 		274880740A3F007100C838C4 /* DNDArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880700A3F007100C838C4 /* DNDArrayController.m */; };
@@ -98,6 +99,7 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		2721158A09E988A100527EB1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Source/Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		2721161909EA966100527EB1 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Release/TODO.txt; sourceTree = "<group>"; };
+		272450470A5B60B300F716B5 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		272505650945024C000181A9 /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = CHANGELOG.txt; path = Release/CHANGELOG.txt; sourceTree = "<group>"; };
 		274880670A3F006100C838C4 /* NSFileManager+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+Additions.h"; path = "Source/Categories/NSFileManager+Additions.h"; sourceTree = SOURCE_ROOT; };
 		274880680A3F006100C838C4 /* NSFileManager+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+Additions.m"; path = "Source/Categories/NSFileManager+Additions.m"; sourceTree = SOURCE_ROOT; };
@@ -267,6 +269,7 @@
 			children = (
 				274880A80A3F016700C838C4 /* Icons */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				272450470A5B60B300F716B5 /* Credits.rtf */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				27990C7409E43452007F7D51 /* Preferences.nib */,
@@ -340,6 +343,7 @@
 				0DE78DD10A43A4BB00AEDCDE /* Split_Bar.tiff in Resources */,
 				27F1A6F80A449D9A008212CE /* Remove.png in Resources */,
 				279B3B730A5AAD28007513C5 /* Add.png in Resources */,
+				272450480A5B60B300F716B5 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +362,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "dir=~/Desktop/XASH #dir is the directory for all the zipped files to go\ntempDir=$dir/temp\nresrc=./resources/\n\nmkdir $dir\nmkdir $tempDir\n\n#cp all the build files into a temp dir to get rdy for zipping\ncp -R \"$BUILT_PRODUCTS_DIR/XASH.app\" $tempDir\ncp $resrc/TODO.txt $tempDir\ncp $resrc/CHANGELOG.txt $tempDir\n#cp $resrc/README.rtf $tempDir\ncp $resrc/license.txt $tempDir\n\n#finder zip equiv: http://www.macosxhints.com/article.php?story=20031223150348992\n#so zip up the binary with its other files\nditto -c -k -rsrc \\\n$tempDir \\\n$dir/xash.zip\n\nrm -R $tempDir\n\nexit 0";
+			shellScript = "dir=~/Desktop/XASH #dir is the directory for all the zipped files to go\ntempDir=$dir/temp\nresrc=./Release/\n\nmkdir $dir\nmkdir $tempDir\n\n#cp all the build files into a temp dir to get rdy for zipping\ncp -R \"$BUILT_PRODUCTS_DIR/XASH.app\" $tempDir\ncp $resrc/TODO.txt $tempDir\ncp $resrc/CHANGELOG.txt $tempDir\n#cp $resrc/README.rtf $tempDir\ncp $resrc/license.txt $tempDir\n\n#finder zip equiv: http://www.macosxhints.com/article.php?story=20031223150348992\n#so zip up the binary with its other files\nditto -c -k -rsrc \\\n$tempDir \\\n$dir/xash.zip\n\nrm -R $tempDir\n\nexit 0";
 		};
 		27510CBE09156BB500CFA3D4 /* Package Source */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -492,6 +496,7 @@
 		27DDC80008E6DD94003A36C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APP_VERSION = 1.3;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
@@ -517,6 +522,7 @@
 		27DDC80108E6DD94003A36C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APP_VERSION = 1.3;
 				ARCHS = (
 					ppc,
 					i386,
@@ -544,6 +550,7 @@
 		27DDC80208E6DD94003A36C2 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APP_VERSION = 1.3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					Source/Frameworks,

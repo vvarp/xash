@@ -1,5 +1,7 @@
 V1.3
 	-Added CMD+F shortcut to bring the search field into focus
+	-Much improved interface thanks to Juan Carlos Anorga
+	-Added a plus button to add additional search paths in the preference panel (you can also add via Drag N' Drop)
 	
 10/04/06- V1.2
 	-Fixed a nil URL bug

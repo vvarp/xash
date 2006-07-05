@@ -1,4 +1,3 @@
 -Bookmarks
 -Full text search (like-xcode);
--Configure search paths
 -Make XASH work better w/non-english installations

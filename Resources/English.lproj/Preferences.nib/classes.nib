@@ -12,11 +12,16 @@
             LANGUAGE = ObjC; 
             SUPERCLASS = NSObject; 
         }, 
+        {CLASS = MABPathTextField; LANGUAGE = Java; SUPERCLASS = NSTextField; }, 
         {
             ACTIONS = {addPreferencePath = id; }; 
             CLASS = PreferenceController; 
             LANGUAGE = ObjC; 
-            OUTLETS = {oDNDController = NSArrayController; }; 
+            OUTLETS = {
+                oDNDController = NSArrayController; 
+                oFlashIndex = MABPathTextField; 
+                oFlashPath = MABPathTextField; 
+            }; 
             SUPERCLASS = NSWindowController; 
         }
     ); 

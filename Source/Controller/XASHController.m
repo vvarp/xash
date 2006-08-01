@@ -97,6 +97,10 @@ static XASHController *_sharedController;
 	
 	if(_helpPath == nil) {//then no valid help files were found
 		NSLog(@"No valid help files found");
+		NSRunAlertPanel(
+						NSLocalizedString(@"No Help Documents", nil),
+						NSLocalizedString(@"We were unable to find any valid help documents in the search paths you specified. Please reconfigure your search paths using the preference pane.", nil),
+						@"Ok", nil, nil);
 		return;
 	}
 
@@ -104,7 +108,7 @@ static XASHController *_sharedController;
 	NSArray *helpTopics = [manager directoryContentsAtPath:_helpPath], *helpFolders = PREF_KEY_VALUE(XASH_ADDITIONAL_SEARCH_PATHS);
 	int l = [helpTopics count], l2;
 	NSString *tempDir, *currHelpDir, *helpDirIndex;
-	
+
 	while(l--) {//look through all the contents of the flash7/8 help folder
 		if([manager pathIsDirectory:[_helpPath stringByAppendingPathComponent:tempDir = [helpTopics objectAtIndex:l]]]) {
 			helpDirIndex = [NSString stringWithFormat:@"%@%@%@", _helpPath, tempDir, TOC_PATH];

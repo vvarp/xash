@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define SET_PREF_KEY_VALUE(x, y) [[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:(y) forKey:(x)]
 #define PREF_KEY_VALUE(x) [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:(x)]
 #define PREF_KEY_BOOL(x) [(PREF_KEY_VALUE(x)) boolValue]
 
@@ -21,10 +22,15 @@
 
 #define PATH_KEY @"path"
 
+@class MABPathTextField;
+
 @interface PreferenceController : NSWindowController {
 	IBOutlet NSArrayController *oDNDController;
+	IBOutlet MABPathTextField *oFlashIndex;
+	IBOutlet MABPathTextField *oFlashPath;
 }
 
 - (IBAction) addPreferencePath:(id) sender;
 - (void) openPanelDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
+- (void) windowWillClose:(NSNotification *)aNotification;
 @end

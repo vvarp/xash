@@ -34,6 +34,8 @@
 		0DE78DCF0A43A4BB00AEDCDE /* Forward_Pressed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DC80A43A4BB00AEDCDE /* Forward_Pressed.tiff */; };
 		0DE78DD00A43A4BB00AEDCDE /* Forward.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DC90A43A4BB00AEDCDE /* Forward.tiff */; };
 		0DE78DD10A43A4BB00AEDCDE /* Split_Bar.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0DE78DCA0A43A4BB00AEDCDE /* Split_Bar.tiff */; };
+		271C516E0A7E8EC8009804B3 /* Remove.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 271C516C0A7E8EC8009804B3 /* Remove.tiff */; };
+		271C516F0A7E8EC8009804B3 /* Add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 271C516D0A7E8EC8009804B3 /* Add.tiff */; };
 		2721158B09E988A100527EB1 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2721158A09E988A100527EB1 /* Sparkle.framework */; };
 		272115E509EA93F500527EB1 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2721158A09E988A100527EB1 /* Sparkle.framework */; };
 		272450480A5B60B300F716B5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 272450470A5B60B300F716B5 /* Credits.rtf */; };
@@ -47,10 +49,10 @@
 		274880BC0A3F017B00C838C4 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 274880B90A3F017B00C838C4 /* icon.icns */; };
 		274880C20A3F023700C838C4 /* ASHelpXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880C00A3F023700C838C4 /* ASHelpXMLParser.m */; };
 		274880C60A3F024700C838C4 /* ASHelpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880C40A3F024700C838C4 /* ASHelpNode.m */; };
+		2753CD190A7E2ABA00E6BBAC /* MABPathTextField.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2753CD170A7E2ABA00E6BBAC /* MABPathTextField.h */; };
+		2753CD1A0A7E2ABA00E6BBAC /* MABPathTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753CD180A7E2ABA00E6BBAC /* MABPathTextField.m */; };
 		27990C7609E43452007F7D51 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 27990C7409E43452007F7D51 /* Preferences.nib */; };
-		279B3B730A5AAD28007513C5 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B3B720A5AAD28007513C5 /* Add.png */; };
 		27DDCDEA08E89FD8003A36C2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DDCDE908E89FD8003A36C2 /* WebKit.framework */; };
-		27F1A6F80A449D9A008212CE /* Remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F1A6F60A449D9A008212CE /* Remove.png */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -77,6 +79,7 @@
 				272115E509EA93F500527EB1 /* Sparkle.framework in Copy Frameworks */,
 				0D821E190A41B0C6004EF02D /* XASHButton.h in Copy Frameworks */,
 				0D821E1B0A41B0C6004EF02D /* XASHSplitView.h in Copy Frameworks */,
+				2753CD190A7E2ABA00E6BBAC /* MABPathTextField.h in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +100,8 @@
 		0DE78DC90A43A4BB00AEDCDE /* Forward.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Forward.tiff; path = Resources/icons/Forward.tiff; sourceTree = "<group>"; };
 		0DE78DCA0A43A4BB00AEDCDE /* Split_Bar.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Split_Bar.tiff; path = Resources/icons/Split_Bar.tiff; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		271C516C0A7E8EC8009804B3 /* Remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Remove.tiff; path = ../../DropKick/trunk/Source/Icons/Remove.tiff; sourceTree = SOURCE_ROOT; };
+		271C516D0A7E8EC8009804B3 /* Add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Add.tiff; path = ../../DropKick/trunk/Source/Icons/Add.tiff; sourceTree = SOURCE_ROOT; };
 		2721158A09E988A100527EB1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Source/Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		2721161909EA966100527EB1 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Release/TODO.txt; sourceTree = "<group>"; };
 		272450470A5B60B300F716B5 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };
@@ -121,10 +126,10 @@
 		274880C00A3F023700C838C4 /* ASHelpXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASHelpXMLParser.m; path = Source/Controller/ASHelpXMLParser.m; sourceTree = SOURCE_ROOT; };
 		274880C30A3F024700C838C4 /* ASHelpNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASHelpNode.h; path = Source/Model/ASHelpNode.h; sourceTree = SOURCE_ROOT; };
 		274880C40A3F024700C838C4 /* ASHelpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASHelpNode.m; path = Source/Model/ASHelpNode.m; sourceTree = SOURCE_ROOT; };
+		2753CD170A7E2ABA00E6BBAC /* MABPathTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MABPathTextField.h; path = Source/View/MABPathTextField.h; sourceTree = "<group>"; };
+		2753CD180A7E2ABA00E6BBAC /* MABPathTextField.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MABPathTextField.m; path = Source/View/MABPathTextField.m; sourceTree = "<group>"; };
 		27990C7509E43452007F7D51 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = Resources/English.lproj/Preferences.nib; sourceTree = "<group>"; };
-		279B3B720A5AAD28007513C5 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Add.png; path = Resources/icons/Add.png; sourceTree = "<group>"; };
 		27DDCDE908E89FD8003A36C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
-		27F1A6F60A449D9A008212CE /* Remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Remove.png; path = Resources/icons/Remove.png; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = Resources/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* XASH_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XASH_Prefix.pch; path = Source/XASH_Prefix.pch; sourceTree = "<group>"; };
@@ -164,6 +169,8 @@
 		0D821E110A41B08C004EF02D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2753CD170A7E2ABA00E6BBAC /* MABPathTextField.h */,
+				2753CD180A7E2ABA00E6BBAC /* MABPathTextField.m */,
 				0D821E150A41B0C6004EF02D /* XASHButton.h */,
 				0D821E160A41B0C6004EF02D /* XASHButton.m */,
 				0D821E170A41B0C6004EF02D /* XASHSplitView.h */,
@@ -192,8 +199,8 @@
 		274880A80A3F016700C838C4 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				279B3B720A5AAD28007513C5 /* Add.png */,
-				27F1A6F60A449D9A008212CE /* Remove.png */,
+				271C516C0A7E8EC8009804B3 /* Remove.tiff */,
+				271C516D0A7E8EC8009804B3 /* Add.tiff */,
 				0DE78DC40A43A4BB00AEDCDE /* Back_Disabled.tiff */,
 				0DE78DC50A43A4BB00AEDCDE /* Back_Pressed.tiff */,
 				0DE78DC60A43A4BB00AEDCDE /* Back.tiff */,
@@ -341,9 +348,9 @@
 				0DE78DCF0A43A4BB00AEDCDE /* Forward_Pressed.tiff in Resources */,
 				0DE78DD00A43A4BB00AEDCDE /* Forward.tiff in Resources */,
 				0DE78DD10A43A4BB00AEDCDE /* Split_Bar.tiff in Resources */,
-				27F1A6F80A449D9A008212CE /* Remove.png in Resources */,
-				279B3B730A5AAD28007513C5 /* Add.png in Resources */,
 				272450480A5B60B300F716B5 /* Credits.rtf in Resources */,
+				271C516E0A7E8EC8009804B3 /* Remove.tiff in Resources */,
+				271C516F0A7E8EC8009804B3 /* Add.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +404,7 @@
 				274880C60A3F024700C838C4 /* ASHelpNode.m in Sources */,
 				0D821E1A0A41B0C6004EF02D /* XASHButton.m in Sources */,
 				0D821E1C0A41B0C6004EF02D /* XASHSplitView.m in Sources */,
+				2753CD1A0A7E2ABA00E6BBAC /* MABPathTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

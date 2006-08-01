@@ -46,8 +46,7 @@ static FilterController *_sharedFilter;
 
 -(void) reloadData {//this is only called once after all the books have been loaded
 	NSMutableArray *books = [[[[ASHelpOutlineDataSource sharedSource] rootNode] children] mutableCopy];
-	[books insertObject:[ASHelpNode nodeWithName:@"All Books"
-									 andHelpPage:nil] atIndex:0];
+	[books insertObject:[ASHelpNode nodeWithName:@"All Books" andHelpPage:nil] atIndex:0];
 
 	[self setFilterArray:books];
 }

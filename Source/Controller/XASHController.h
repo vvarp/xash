@@ -58,12 +58,13 @@
 //----------------------------
 //		Class Methods
 //----------------------------
-+(XASHController *) sharedController;
++ (XASHController *) sharedController;
 
 //----------------------------
 //		Misc Methods
 //----------------------------
--(void) configFlashVersion;
+- (void) configFlashVersion;
+- (void) loadHelpFiles;
 
 //----------------------------
 //		Action Methods
@@ -97,11 +98,9 @@
 //	 Toolbar Methods
 //----------------------------
 
-- (void)setupToolbar;
-- (NSToolbarItem *)toolbar:(NSToolbar *)toolbar
-itemForItemIdentifier:(NSString *)itemIdentifier
-willBeInsertedIntoToolbar:(BOOL)flag;
-- (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar;
-- (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar;
+- (void) setupToolbar;
+- (NSToolbarItem *) toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag;
+- (NSArray *) toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar;
+- (NSArray *) toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar;
 
 @end

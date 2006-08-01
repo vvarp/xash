@@ -1,3 +1,4 @@
 -Bookmarks
 -Full text search (like-xcode);
--Make XASH work better w/non-english installations
+-Make XASH work better w/non-english installations (language code selection)
+-Remove the need for a help index file reference for flash 7/8

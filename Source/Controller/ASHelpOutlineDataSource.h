@@ -32,7 +32,7 @@
 //----------------------------
 //		Class Methods
 //----------------------------
-+(ASHelpOutlineDataSource *) sharedSource;
++ (ASHelpOutlineDataSource *) sharedSource;
 
 //----------------------------
 //		KVO Methods
@@ -42,19 +42,20 @@
 //----------------------------
 //		Getter & Setter
 //----------------------------
--(ASHelpNode *) rootNode;
+- (ASHelpNode *) rootNode;
+- (void) setRootNote:(ASHelpNode *)node;
 
 //----------------------------
 //		Data Source Methods
 //----------------------------
--(id) outlineView:(NSOutlineView *)outlineView child:(int)index ofItem:(id)item;
--(BOOL) outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item;
--(int) outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item;
--(id) outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item;
+- (id) outlineView:(NSOutlineView *)outlineView child:(int)index ofItem:(id)item;
+- (BOOL) outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item;
+- (int) outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item;
+- (id) outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item;
 
 //----------------------------
 //		Delegate Methods
 //----------------------------
-- (void)outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item;
+- (void) outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item;
 
 @end

@@ -30,7 +30,15 @@
 	IBOutlet MABPathTextField *oFlashPath;
 }
 
-- (IBAction) addPreferencePath:(id) sender;
+//======================================
+//		Action Methods
+//======================================
+- (IBAction) addPreferencePath:(id)sender;
+- (IBAction) reloadHelpFiles:(id)sender;
+
+//======================================
+//		Delegate Methods
+//======================================
 - (void) openPanelDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
 - (void) windowWillClose:(NSNotification *)aNotification;
 @end

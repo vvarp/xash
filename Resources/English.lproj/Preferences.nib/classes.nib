@@ -14,7 +14,7 @@
         }, 
         {CLASS = MABPathTextField; LANGUAGE = Java; SUPERCLASS = NSTextField; }, 
         {
-            ACTIONS = {addPreferencePath = id; }; 
+            ACTIONS = {addPreferencePath = id; reloadHelpFiles = id; }; 
             CLASS = PreferenceController; 
             LANGUAGE = ObjC; 
             OUTLETS = {

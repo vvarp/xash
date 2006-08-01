@@ -61,7 +61,7 @@
 + (XASHController *) sharedController;
 
 //----------------------------
-//		Misc Methods
+//		Functional Methods
 //----------------------------
 - (void) configFlashVersion;
 - (void) loadHelpFiles;
@@ -69,15 +69,16 @@
 //----------------------------
 //		Action Methods
 //----------------------------
--(IBAction) setHelpPage:(id)sender;
--(IBAction) goToWebSite:(id)sender;
--(IBAction) openPreferences:(id)sender;
--(IBAction) selectSearchField:(id)sender;
+- (IBAction) setHelpPage:(id)sender;
+- (IBAction) goToWebSite:(id)sender;
+- (IBAction) openPreferences:(id)sender;
+- (IBAction) selectSearchField:(id)sender;
 
 //----------------------------
 //		Getter & Setter
 //----------------------------
--(NSArray *) allHelpPages;
+- (NSArray *) allHelpPages;
+- (void) setAllHelpPages:(NSArray *) pages;
 
 //----------------------------
 //		Delegate Methods

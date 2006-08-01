@@ -57,9 +57,9 @@ static XASHController *_sharedController;
 }
 
 //----------------------------
-//		Misc Methods
+//		Functional Methods
 //----------------------------
--(void) configFlashVersion {
+- (void) configFlashVersion {
 	NSFileManager *manager = [NSFileManager defaultManager];
 	NSString *f8Path = PREF_KEY_VALUE(XASH_FLASH_PATH_8_KEY), *f7Path = PREF_KEY_VALUE(XASH_FLASH_PATH_7_KEY);
 
@@ -73,6 +73,73 @@ static XASHController *_sharedController;
 		_helpPath = nil;
 		//_helpIndex = nil;
 	}
+	
+	//if no valid help files were found
+	if(_helpPath == nil) {
+		NSLog(@"No valid help files found");
+		NSRunAlertPanel(NSLocalizedString(@"No Help Documents", nil), NSLocalizedString(@"We were unable to find any valid help documents in the search paths you specified. Please reconfigure your search paths using the preference pane.", nil), @"Ok", nil, nil);
+	}
+}
+
+- (void) loadHelpFiles {
+	//config the help file paths
+	[self configFlashVersion];
+	
+	if(_helpPath == nil) 
+		return;
+	
+	NSFileManager *manager = [NSFileManager defaultManager];
+	NSArray *helpTopics = [manager directoryContentsAtPath:_helpPath], *helpFolders = PREF_KEY_VALUE(XASH_ADDITIONAL_SEARCH_PATHS);
+	int l = [helpTopics count], l2;
+	NSString *tempDir, *currHelpDir, *helpDirIndex;
+	
+	//reset the outline data
+	[[ASHelpOutlineDataSource sharedSource] setRootNote:[[ASHelpNode new] autorelease]];
+	
+	//look through all the contents of the flash7/8 help folder and load any help indexes found
+	while(l--) {
+		if([manager pathIsDirectory:[_helpPath stringByAppendingPathComponent:tempDir = [helpTopics objectAtIndex:l]]]) {
+			helpDirIndex = [NSString stringWithFormat:@"%@%@%@", _helpPath, tempDir, TOC_PATH];
+			if([manager fileExistsAtPath:helpDirIndex]) {//check to make sure the file exists first
+				ADD_XML_FILE(helpDirIndex);
+			}
+		}
+	}
+	
+	//loop through all the additional search directories and load any help indexes found
+	l = [helpFolders count];
+	while(l--) {
+		if(![manager pathIsDirectory:currHelpDir = [[helpFolders objectAtIndex:l] valueForKey:PATH_KEY]]) {
+			NSLog(@"File/Folder %@ does not exist, or is not a directory.", currHelpDir);
+			continue;
+		}
+		
+		helpTopics = [manager directoryContentsAtPath:currHelpDir];
+		l2 = [helpTopics count];
+		
+		//loop through all the additional folders in the additional directories
+		while(l2--) {
+			if([manager pathIsDirectory:tempDir = [currHelpDir stringByAppendingPathComponent:[helpTopics objectAtIndex:l2]]]) {
+				helpDirIndex = [tempDir stringByAppendingString:TOC_PATH];
+				if([manager fileExistsAtPath:helpDirIndex]) {
+					ADD_XML_FILE(helpDirIndex);
+				} else {
+					NSLog(@"Table of contents index file %@ not found", helpDirIndex);
+				}
+			} else {
+				NSLog(@"File/Folder %@ does not exist, or is not a directory.", tempDir);
+			}
+		}
+	}
+	
+	//get all the help pages in a linear array and save a reference to it
+	//this is used to easily find a URL even if it isn't visible in the tree
+	[self setAllHelpPages:[[[ASHelpOutlineDataSource sharedSource] rootNode] allChildren]];
+	
+	//load the index page, tree data, and filter information
+	[[oWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_helpIndex]]];
+	[[FilterController sharedFilter] reloadData];
+	[oHelpTree reloadData];	
 }
 
 //----------------------------
@@ -93,66 +160,13 @@ static XASHController *_sharedController;
 }
 
 -(void) awakeFromNib {
-	[self configFlashVersion];
-	
-	if(_helpPath == nil) {//then no valid help files were found
-		NSLog(@"No valid help files found");
-		NSRunAlertPanel(
-						NSLocalizedString(@"No Help Documents", nil),
-						NSLocalizedString(@"We were unable to find any valid help documents in the search paths you specified. Please reconfigure your search paths using the preference pane.", nil),
-						@"Ok", nil, nil);
-		return;
-	}
-
-	NSFileManager *manager = [NSFileManager defaultManager];
-	NSArray *helpTopics = [manager directoryContentsAtPath:_helpPath], *helpFolders = PREF_KEY_VALUE(XASH_ADDITIONAL_SEARCH_PATHS);
-	int l = [helpTopics count], l2;
-	NSString *tempDir, *currHelpDir, *helpDirIndex;
-
-	while(l--) {//look through all the contents of the flash7/8 help folder
-		if([manager pathIsDirectory:[_helpPath stringByAppendingPathComponent:tempDir = [helpTopics objectAtIndex:l]]]) {
-			helpDirIndex = [NSString stringWithFormat:@"%@%@%@", _helpPath, tempDir, TOC_PATH];
-			if([manager fileExistsAtPath:helpDirIndex]) {//check to make sure the file exists first
-				ADD_XML_FILE(helpDirIndex);
-			}
-		}
-	}
-	
-	l = [helpFolders count];
-	while(l--) {//loop through all the additional search directorys
-		if(![manager pathIsDirectory:currHelpDir = [[helpFolders objectAtIndex:l] valueForKey:PATH_KEY]]) {
-			NSLog(@"File/Folder %@ does not exist, or is not a directory.", currHelpDir);
-			continue;
-		}
-		
-		helpTopics = [manager directoryContentsAtPath:currHelpDir];
-		l2 = [helpTopics count];
-		
-		while(l2--) {//loop through all the additional folders in the additional directories
-			if([manager pathIsDirectory:tempDir = [currHelpDir stringByAppendingPathComponent:[helpTopics objectAtIndex:l2]]]) {
-				helpDirIndex = [tempDir stringByAppendingString:TOC_PATH];
-				if([manager fileExistsAtPath:helpDirIndex]) {
-					ADD_XML_FILE(helpDirIndex);
-				} else {
-					NSLog(@"Table of contents index file %@ not found", helpDirIndex);
-				}
-			} else {
-				NSLog(@"File/Folder %@ does not exist, or is not a directory.", tempDir);
-			}
-		}
-	}
-	
 	//exclude the main window from the 
 	[oHelpWindow setExcludedFromWindowsMenu:YES];
 	
-	//get all the help pages in a linear array
-	_allHelpPages = [[[[ASHelpOutlineDataSource sharedSource] rootNode] allChildren] retain];
-
-	//load the index page, tree data, and filter information
-	[[oWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_helpIndex]]];
-	[[FilterController sharedFilter] reloadData];
-	[oHelpTree reloadData];
+	//help files loading
+	[self loadHelpFiles];
 	
+	//toolbar setup
 	[self setupToolbar];
 }
 
@@ -190,14 +204,21 @@ static XASHController *_sharedController;
 	if(![toolbar isVisible]) {
 		[toolbar setVisible:YES];
 	}
+	
 	[oSearchField selectText:self];
 }
 
 //----------------------------
 //		Getter & Setter
 //----------------------------
--(NSArray *) allHelpPages {
+- (NSArray *) allHelpPages {
 	return _allHelpPages;	
+}
+
+- (void) setAllHelpPages:(NSArray *) pages {
+	[pages retain];
+	[_allHelpPages release];
+	_allHelpPages = pages;
 }
 
 //----------------------------

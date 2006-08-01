@@ -48,7 +48,7 @@ static FilterController *_sharedFilter;
 	NSMutableArray *books = [[[[ASHelpOutlineDataSource sharedSource] rootNode] children] mutableCopy];
 	[books insertObject:[ASHelpNode nodeWithName:@"All Books" andHelpPage:nil] atIndex:0];
 
-	[self setFilterArray:books];
+	[self setFilterArray:[books autorelease]];
 }
 
 -(IBAction) setFilteredBook:(id)sender {//called by the pop-up menu, the data source is watching the filterIndex so it knows once its changed

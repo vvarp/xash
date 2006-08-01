@@ -51,22 +51,24 @@ static ASHelpOutlineDataSource *_sharedSource;
 		extern ASHelpOutlineDataSource *_sharedSource;
 		_sharedSource = self; //only one instance of this ob, so set the shared ob to itself
 		
-		_rootNode = [ASHelpNode new];
+		[self setRootNote:[[ASHelpNode new] autorelease]];
 	}
+	
 	return self;
 }
 
 -(void) awakeFromNib {
 	//register observers to objects that are stored in a nib after the nib is loaded
+	//listen for changes in the filtering and searching parameters to change the data accordingly
 	[[FilterController sharedFilter] addObserver:self
-											forKeyPath:@"filterIndex"
-											   options:0
-											   context:nil];
+									  forKeyPath:@"filterIndex"
+										 options:0
+										 context:nil];
 	
 	[[FilterController sharedFilter] addObserver:self
-											forKeyPath:@"searchString"
-											   options:0
-											   context:nil];
+									  forKeyPath:@"searchString"
+										 options:0
+										 context:nil];
 }
 
 //----------------------------
@@ -119,8 +121,14 @@ static ASHelpOutlineDataSource *_sharedSource;
 //----------------------------
 //		Getter & Setter
 //----------------------------
--(ASHelpNode *) rootNode {
+- (ASHelpNode *) rootNode {
 	return _rootNode;
+}
+
+- (void) setRootNote:(ASHelpNode *)node {
+	[node retain];
+	[_rootNode release];
+	_rootNode = node;
 }
 
 //----------------------------
@@ -129,7 +137,7 @@ static ASHelpOutlineDataSource *_sharedSource;
 
 //if item  == nil then we are starting at the root, this goes for all datasource methods
 
--(id)outlineView:(NSOutlineView *)outlineView child:(int)index ofItem:(id)item {
+- (id) outlineView:(NSOutlineView *)outlineView child:(int)index ofItem:(id)item {
 	DATA_SOURCE_CHECK_NIL;
 
 	if(_isSearching) return [[[FilterController sharedFilter] searchResults] objectAtIndex:index];
@@ -137,7 +145,7 @@ static ASHelpOutlineDataSource *_sharedSource;
 	return [[item children] objectAtIndex:index];
 }
 
--(BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
+- (BOOL) outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
 	DATA_SOURCE_CHECK_NIL;
 	
 	//when we are searching no items are expandable
@@ -146,7 +154,7 @@ static ASHelpOutlineDataSource *_sharedSource;
 	return [[item children] count] != 0;
 }
 
--(int) outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
+- (int) outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
 	if(_isSearching) {
 		if(item != nil) {//while searching there is never any children
 			return 0;
@@ -160,11 +168,11 @@ static ASHelpOutlineDataSource *_sharedSource;
 	return [[(ASHelpNode*)item children] count]; 
 }
 
-- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
+- (id) outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
 	return [item name];
 }
 
-- (void)outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
+- (void) outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
 	[cell setControlSize:NSSmallControlSize];
 	[cell setFont:[NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:NSSmallControlSize]]];
 }

@@ -1,4 +1,4 @@
-V1.3
+08/04/06- V1.3
 	-Added CMD+F shortcut to bring the search field into focus
 	-Much improved interface thanks to Juan Carlos Anorga
 	-Added a plus button to add additional search paths in the preference panel (you can also add via Drag N' Drop)
@@ -6,7 +6,7 @@ V1.3
 	-You can now reload help files without relaunching the program
 	-Reorganized preference pane
 	-Fixed some memory leaks
-	-Updated Sparkle.framework to 1.0
+	-Updated Sparkle.framework to 1.1
 	
 04/10/06- V1.2
 	-Fixed a nil URL bug

@@ -7,13 +7,18 @@
             SUPERCLASS = NSObject; 
         }, 
         {
-            ACTIONS = {setFilteredBook = id; setSearchStr = id; }; 
+            ACTIONS = {setFilteredBook = id; }; 
             CLASS = FilterController; 
             LANGUAGE = ObjC; 
             OUTLETS = {oSearchField = NSSearchField; }; 
             SUPERCLASS = NSObject; 
         }, 
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = MABReturnActionOutlineView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSOutlineView; 
+        }, 
         {
             ACTIONS = {checkForUpdates = id; }; 
             CLASS = SUUpdater; 
@@ -26,6 +31,7 @@
                 goToWebSite = id; 
                 openPreferences = id; 
                 selectSearchField = id; 
+                selectTopSearchItem = id; 
                 setHelpPage = id; 
             }; 
             CLASS = XASHController; 

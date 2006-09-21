@@ -208,6 +208,13 @@ static XASHController *_sharedController;
 	[oSearchField selectText:self];
 }
 
+- (IBAction) selectTopSearchItem:(id)sender {
+	if(![sender currentEditor]) {//then they pressed enter
+		[oHelpTree selectRow:0 byExtendingSelection:NO];
+		[[oHelpTree target] performSelector:[oHelpTree action] withObject:self];
+	}
+}
+
 //----------------------------
 //		Getter & Setter
 //----------------------------
@@ -225,6 +232,7 @@ static XASHController *_sharedController;
 //		Delegate Methods
 //----------------------------
 - (void)webView:(WebView *)sender didStartProvisionalLoadForFrame:(WebFrame *)frame {
+	NSLog(@"Load");
 	NSString *currURL;
 	if([currURL = [[[[frame provisionalDataSource] request] URL] absoluteString] isEqualToString:@"file://(null)"]) {//check for a null URL
 #if DEBUG >= 1
@@ -285,7 +293,7 @@ static XASHController *_sharedController;
 
 - (void)webView:(WebView *)sender didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
 #if DEBUG >= 1
-	NSLog(@"%@", error);
+	NSLog(@"Load error %@", error);
 #endif
 }
 

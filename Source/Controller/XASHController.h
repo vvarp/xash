@@ -73,6 +73,7 @@
 - (IBAction) goToWebSite:(id)sender;
 - (IBAction) openPreferences:(id)sender;
 - (IBAction) selectSearchField:(id)sender;
+- (IBAction) selectTopSearchItem:(id)sender;
 
 //----------------------------
 //		Getter & Setter

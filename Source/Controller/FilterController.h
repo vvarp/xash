@@ -27,20 +27,19 @@
 	int _filterIndex;
 }
 
-+(FilterController *) sharedFilter;
--(IBAction) setFilteredBook:(id)sender; //called by the book list NSPopUpMenu
--(IBAction) setSearchStr:(id)sender; //SearchStr to prevent conflicts with the setter method
--(void) reloadData;
++ (FilterController *) sharedFilter;
+- (IBAction) setFilteredBook:(id)sender; //called by the book list NSPopUpMenu
+- (void) reloadData;
 
 //----------------------------
 //		Getters & Setters
 //----------------------------
--(NSMutableArray *) filterArray;
--(void) setFilterArray:(NSMutableArray *) a;
--(int) filterIndex;
--(void) setFilterIndex:(int) index;
--(NSString *) searchString;
--(void) setSearchString:(NSString *)str;
--(NSArray *) searchResults;
--(void) setSearchResults:(NSArray *) ar;
+- (NSMutableArray *) filterArray;
+- (void) setFilterArray:(NSMutableArray *) a;
+- (int) filterIndex;
+- (void) setFilterIndex:(int) index;
+- (NSString *) searchString;
+- (void) setSearchString:(NSString *)str;
+- (NSArray *) searchResults;
+- (void) setSearchResults:(NSArray *) ar;
 @end

@@ -1,3 +1,7 @@
+	-Search speed improvements
+	-Hitting return with the help tree in focus will open the currently selected page in the help tree
+	-Hitting return in the search field will cause the top most search item to open
+
 08/04/06- V1.3
 	-Added CMD+F shortcut to bring the search field into focus
 	-Much improved interface thanks to Juan Carlos Anorga

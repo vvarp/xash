@@ -51,6 +51,8 @@
 		274880C60A3F024700C838C4 /* ASHelpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 274880C40A3F024700C838C4 /* ASHelpNode.m */; };
 		2753CD190A7E2ABA00E6BBAC /* MABPathTextField.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2753CD170A7E2ABA00E6BBAC /* MABPathTextField.h */; };
 		2753CD1A0A7E2ABA00E6BBAC /* MABPathTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753CD180A7E2ABA00E6BBAC /* MABPathTextField.m */; };
+		278474F80AC330BE001EC454 /* MABReturnActionOutlineView.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 278474F60AC330BE001EC454 /* MABReturnActionOutlineView.h */; };
+		278474F90AC330BE001EC454 /* MABReturnActionOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 278474F70AC330BE001EC454 /* MABReturnActionOutlineView.m */; };
 		27990C7609E43452007F7D51 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 27990C7409E43452007F7D51 /* Preferences.nib */; };
 		27DDCDEA08E89FD8003A36C2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DDCDE908E89FD8003A36C2 /* WebKit.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -80,6 +82,7 @@
 				0D821E190A41B0C6004EF02D /* XASHButton.h in Copy Frameworks */,
 				0D821E1B0A41B0C6004EF02D /* XASHSplitView.h in Copy Frameworks */,
 				2753CD190A7E2ABA00E6BBAC /* MABPathTextField.h in Copy Frameworks */,
+				278474F80AC330BE001EC454 /* MABReturnActionOutlineView.h in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +131,8 @@
 		274880C40A3F024700C838C4 /* ASHelpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASHelpNode.m; path = Source/Model/ASHelpNode.m; sourceTree = SOURCE_ROOT; };
 		2753CD170A7E2ABA00E6BBAC /* MABPathTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MABPathTextField.h; path = Source/View/MABPathTextField.h; sourceTree = "<group>"; };
 		2753CD180A7E2ABA00E6BBAC /* MABPathTextField.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MABPathTextField.m; path = Source/View/MABPathTextField.m; sourceTree = "<group>"; };
+		278474F60AC330BE001EC454 /* MABReturnActionOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MABReturnActionOutlineView.h; path = Source/View/MABReturnActionOutlineView.h; sourceTree = "<group>"; };
+		278474F70AC330BE001EC454 /* MABReturnActionOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MABReturnActionOutlineView.m; path = Source/View/MABReturnActionOutlineView.m; sourceTree = "<group>"; };
 		27990C7509E43452007F7D51 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = Resources/English.lproj/Preferences.nib; sourceTree = "<group>"; };
 		27DDCDE908E89FD8003A36C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
@@ -175,6 +180,8 @@
 				0D821E160A41B0C6004EF02D /* XASHButton.m */,
 				0D821E170A41B0C6004EF02D /* XASHSplitView.h */,
 				0D821E180A41B0C6004EF02D /* XASHSplitView.m */,
+				278474F60AC330BE001EC454 /* MABReturnActionOutlineView.h */,
+				278474F70AC330BE001EC454 /* MABReturnActionOutlineView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -405,6 +412,7 @@
 				0D821E1A0A41B0C6004EF02D /* XASHButton.m in Sources */,
 				0D821E1C0A41B0C6004EF02D /* XASHSplitView.m in Sources */,
 				2753CD1A0A7E2ABA00E6BBAC /* MABPathTextField.m in Sources */,
+				278474F90AC330BE001EC454 /* MABReturnActionOutlineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,65 +53,65 @@ static FilterController *_sharedFilter;
 
 -(IBAction) setFilteredBook:(id)sender {//called by the pop-up menu, the data source is watching the filterIndex so it knows once its changed
 	[self setFilterIndex:[sender indexOfSelectedItem]];
-	[self setSearchStr:oSearchField];
-}
-
--(IBAction) setSearchStr:(id)sender {
-	NSMutableArray *results = [NSMutableArray array];
-	NSArray *allPages = _filterIndex == 0 ? [[XASHController sharedController] allHelpPages] : [[[[[ASHelpOutlineDataSource sharedSource] rootNode] children] objectAtIndex:_filterIndex - 1] allChildren];
-	NSString *searchStr = [sender stringValue];
-	ASHelpNode *temp;
-	int l = [allPages count], a = 0;
-	BOOL caseInsensitive = PREF_KEY_BOOL(CASE_INSENSITIVE_SEARCH);
-	
-	if(!isEmpty(searchStr)) {
-		for(; a < l; a++) {
-			if([[temp = [allPages objectAtIndex:a] name] containsString:searchStr ignoringCase:caseInsensitive]) {
-				[results addObject:temp];
-			}
-		}
-	}
-	
-	[self setSearchResults:results];
-	[self setSearchString:searchStr];
+	[self setSearchString:_searchString];
 }
 
 //----------------------------
 //		Getters & Setters
 //----------------------------
--(NSMutableArray *) filterArray {
+- (NSMutableArray *) filterArray {
 	return _filterArray;
 }
 
--(void) setFilterArray:(NSMutableArray *) a {
+- (void) setFilterArray:(NSMutableArray *) a {
 	[a retain];
 	[_filterArray release];
 	_filterArray = a;
 }
 
--(int) filterIndex {
+- (int) filterIndex {
 	return _filterIndex;	
 }
 
--(void) setFilterIndex:(int) index {
+- (void) setFilterIndex:(int) index {
 	_filterIndex = index;
 }
 
--(NSString *) searchString {
+- (NSString *) searchString {
 	return _searchString;
 }
 
--(void) setSearchString:(NSString *)str {
+- (void) setSearchString:(NSString *)str {
+	//even if the string are the same we must set them and re-run the searching alg'r
+	//the user might of changed the book filtering
+	
 	[str retain];
 	[_searchString release];
 	_searchString = str;
+	
+	NSMutableArray *results = [NSMutableArray array];
+	
+	if(!isEmpty(_searchString)) {
+		NSArray *allPages = _filterIndex == 0 ? [[XASHController sharedController] allHelpPages] : [[[[[ASHelpOutlineDataSource sharedSource] rootNode] children] objectAtIndex:_filterIndex - 1] allChildren];
+		ASHelpNode *temp;
+		int l = [allPages count], a = 0;
+		BOOL caseInsensitive = PREF_KEY_BOOL(CASE_INSENSITIVE_SEARCH);		
+	
+		for(; a < l; a++) {
+			if([[temp = [allPages objectAtIndex:a] name] containsString:_searchString ignoringCase:caseInsensitive]) {
+				[results addObject:temp];
+			}
+		}
+	}
+	
+	[self setSearchResults:results];	
 }
 
--(NSArray *) searchResults {
+- (NSArray *) searchResults {
 	return _searchResults;
 }
 
--(void) setSearchResults:(NSArray *) ar {
+- (void) setSearchResults:(NSArray *) ar {
 	[ar retain];
 	[_searchResults release];
 	_searchResults = ar;

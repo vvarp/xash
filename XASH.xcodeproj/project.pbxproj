@@ -103,8 +103,8 @@
 		0DE78DC90A43A4BB00AEDCDE /* Forward.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Forward.tiff; path = Resources/icons/Forward.tiff; sourceTree = "<group>"; };
 		0DE78DCA0A43A4BB00AEDCDE /* Split_Bar.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Split_Bar.tiff; path = Resources/icons/Split_Bar.tiff; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		271C516C0A7E8EC8009804B3 /* Remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Remove.tiff; path = ../../DropKick/trunk/Source/Icons/Remove.tiff; sourceTree = SOURCE_ROOT; };
-		271C516D0A7E8EC8009804B3 /* Add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Add.tiff; path = ../../DropKick/trunk/Source/Icons/Add.tiff; sourceTree = SOURCE_ROOT; };
+		271C516C0A7E8EC8009804B3 /* Remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Remove.tiff; path = Resources/icons/Remove.tiff; sourceTree = "<group>"; };
+		271C516D0A7E8EC8009804B3 /* Add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Add.tiff; path = Resources/icons/Add.tiff; sourceTree = "<group>"; };
 		2721158A09E988A100527EB1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Source/Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		2721161909EA966100527EB1 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Release/TODO.txt; sourceTree = "<group>"; };
 		272450470A5B60B300F716B5 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = SOURCE_ROOT; };

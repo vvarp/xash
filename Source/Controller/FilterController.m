@@ -38,11 +38,35 @@ static FilterController *_sharedFilter;
 	if (self = [super init]) {
 		extern FilterController *_sharedFilter;
 		_sharedFilter = self;
+		
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(applicationDidFinishLaunching:)
+													 name:NSApplicationDidFinishLaunchingNotification
+												   object:NSApp];
 	}
 	
 	return self;
 }
 
+- (void) applicationDidFinishLaunching:(NSNotification *)note {
+	if(PREF_KEY_BOOL(XASH_USE_LAST_BOOK)) {
+		int a = 0, l = [_filterArray count];
+		NSString *bookName = PREF_KEY_VALUE(XASH_LAST_BOOK_NAME);
+		
+		if(!isEmpty(bookName))
+			for(; a < l; a++) {
+				if([bookName isEqualToString:[[_filterArray objectAtIndex:a] name]]) {
+					break;
+				}
+			}
+				
+		if(a != l) {
+			[self setFilterIndex:a];
+			[self setSearchString:_searchString];
+			[oBookFilter selectItemWithTitle:bookName];
+		}
+	}
+}
 
 -(void) reloadData {//this is only called once after all the books have been loaded
 	NSMutableArray *books = [[[[ASHelpOutlineDataSource sharedSource] rootNode] children] mutableCopy];
@@ -54,6 +78,9 @@ static FilterController *_sharedFilter;
 -(IBAction) setFilteredBook:(id)sender {//called by the pop-up menu, the data source is watching the filterIndex so it knows once its changed
 	[self setFilterIndex:[sender indexOfSelectedItem]];
 	[self setSearchString:_searchString];
+	
+	
+	SET_PREF_KEY_VALUE(XASH_LAST_BOOK_NAME, [[_filterArray objectAtIndex:[self filterIndex]] name]);
 }
 
 //----------------------------

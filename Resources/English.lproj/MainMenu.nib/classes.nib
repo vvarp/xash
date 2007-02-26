@@ -10,7 +10,7 @@
             ACTIONS = {setFilteredBook = id; }; 
             CLASS = FilterController; 
             LANGUAGE = ObjC; 
-            OUTLETS = {oSearchField = NSSearchField; }; 
+            OUTLETS = {oBookFilter = NSPopUpButton; oSearchField = NSSearchField; }; 
             SUPERCLASS = NSObject; 
         }, 
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 

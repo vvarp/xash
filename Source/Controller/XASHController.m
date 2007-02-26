@@ -49,11 +49,13 @@ static XASHController *_sharedController;
 	
 	[defaults setValue:[NSNumber numberWithBool:YES] forKey:CASE_INSENSITIVE_SEARCH];
 	[defaults setValue:[NSNumber numberWithBool:YES] forKey:AUTO_OPEN_HELP_WIN];
+	[defaults setValue:[NSNumber numberWithBool:YES] forKey:XASH_USE_LAST_BOOK];
 	
 	NSArray *searchPaths = [NSArray arrayWithObject:[NSMutableDictionary dictionaryWithObject:[NSHomeDirectory() stringByAppendingString:@"/Library/Application Support/Macromedia/Flash MX 2004/en/Configuration/HelpPanel/Help/"] forKey:PATH_KEY]];
 	[defaults setValue:searchPaths forKey:XASH_ADDITIONAL_SEARCH_PATHS];
 	
 	[[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:defaults];
+	[[NSUserDefaultsController sharedUserDefaultsController] setAppliesImmediately:YES];
 }
 
 //----------------------------

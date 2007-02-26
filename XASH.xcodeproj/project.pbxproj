@@ -492,23 +492,6 @@
 			};
 			name = Release;
 		};
-		27510B890912ADD600CFA3D4 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				OPTIMIZATION_CFLAGS = "-O0";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Package;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = Default;
-		};
 		27DDC80008E6DD94003A36C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -563,30 +546,13 @@
 			};
 			name = Release;
 		};
-		27DDC80208E6DD94003A36C2 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APP_VERSION = 1.3;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					Source/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Source/XASH_Prefix.pch;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				PREBINDING = NO;
-				PRODUCT_NAME = XASH;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Default;
-		};
 		27DDC80408E6DD94003A36C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Debug;
@@ -598,13 +564,6 @@
 			};
 			name = Release;
 		};
-		27DDC80608E6DD94003A36C2 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -613,30 +572,27 @@
 			buildConfigurations = (
 				27510B870912ADD600CFA3D4 /* Debug */,
 				27510B880912ADD600CFA3D4 /* Release */,
-				27510B890912ADD600CFA3D4 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		27DDC7FF08E6DD94003A36C2 /* Build configuration list for PBXNativeTarget "XASH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27DDC80008E6DD94003A36C2 /* Debug */,
 				27DDC80108E6DD94003A36C2 /* Release */,
-				27DDC80208E6DD94003A36C2 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		27DDC80308E6DD94003A36C2 /* Build configuration list for PBXProject "XASH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27DDC80408E6DD94003A36C2 /* Debug */,
 				27DDC80508E6DD94003A36C2 /* Release */,
-				27DDC80608E6DD94003A36C2 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

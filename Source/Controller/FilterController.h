@@ -21,6 +21,7 @@
 
 @interface FilterController : NSObject {
 	IBOutlet NSSearchField *oSearchField;
+	IBOutlet NSPopUpButton *oBookFilter;
 	NSMutableArray *_filterArray;
 	NSArray *_searchResults;
 	NSString *_searchString;

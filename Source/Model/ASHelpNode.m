@@ -36,6 +36,7 @@
 - (id) init {
 	if (self = [super init]) {
 		_children = [NSMutableArray new];
+		[self setHelpPage:@""];
 	}
 	return self;
 }

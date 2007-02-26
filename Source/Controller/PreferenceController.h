@@ -19,6 +19,8 @@
 #define XASH_FLASH_INDEX_7_KEY @"f7Index"
 #define XASH_FLASH_INDEX_8_KEY @"f8Index"
 #define XASH_ADDITIONAL_SEARCH_PATHS @"additionalSearchPaths"
+#define XASH_USE_LAST_BOOK @"useLastBook"
+#define XASH_LAST_BOOK_NAME @"lastBook"
 
 #define PATH_KEY @"path"
 

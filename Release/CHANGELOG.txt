@@ -1,6 +1,8 @@
+03//07- V1.4
 	-Search speed improvements
 	-Hitting return with the help tree in focus will open the currently selected page in the help tree
 	-Hitting return in the search field will cause the top most search item to open
+	-The book filter is now 'sticky' (remembers which book you last filtered by)
 
 08/04/06- V1.3
 	-Added CMD+F shortcut to bring the search field into focus

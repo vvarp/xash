@@ -28,7 +28,7 @@
 #define XASH_FLASH_INDEX_7 @"file:///Users/Shared/Library/Application%20Support/Macromedia/Flash%20MX2004/en/Configuration/HelpPanel/Help/Welcome/Welcome_help.html"
 
 #define TOC_PATH @"/help_toc.xml"
-#define HOME_URL @"http://developer.mabwebdesign.com/xash.html"
+#define HOME_URL @"http://mabblog.com/xash.html"
 
 #define MIN_LEFT_PANEL_W 200.0
 

@@ -3,6 +3,7 @@
 	-Hitting return with the help tree in focus will open the currently selected page in the help tree
 	-Hitting return in the search field will cause the top most search item to open
 	-The book filter is now 'sticky' (remembers which book you last filtered by)
+	-Compiled & tested as a universal binary
 
 08/04/06- V1.3
 	-Added CMD+F shortcut to bring the search field into focus
@@ -30,7 +31,7 @@
 	-Fixed bug where nothing would appear in the left document outline
 	-Window title now represents what page you are currently viewing
 	-f7/f8 root help directory paths can now be specified by the preferences keys f7Path and f8Path
-	-You can specify additionally directorys to be searched for help files through the preference key additionalSearchPaths
+	-You can specify additionally directories to be searched for help files through the preference key additionalSearchPaths
 	-Redid the program structure (now their is only one .nib file containing all the objects)
 	-Added an application icon
 	-XASH is now a universal binary

@@ -10,7 +10,7 @@
 
 @implementation XASHSplitView
 
-- (float)dividerThickness {
+- (float) dividerThickness {
 	return 8.0;
 }
 

@@ -234,7 +234,6 @@ static XASHController *_sharedController;
 //		Delegate Methods
 //----------------------------
 - (void)webView:(WebView *)sender didStartProvisionalLoadForFrame:(WebFrame *)frame {
-	NSLog(@"Load");
 	NSString *currURL;
 	if([currURL = [[[[frame provisionalDataSource] request] URL] absoluteString] isEqualToString:@"file://(null)"]) {//check for a null URL
 #if DEBUG >= 1

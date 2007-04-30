@@ -27,6 +27,17 @@
 
 static FilterController *_sharedFilter;
 
+int lengthSort(id ob1, id ob2, void *context) {
+	int l1 = [[ob1 name] length], l2 = [[ob2 name] length];
+	
+	if(l1 < l2)
+		return NSOrderedAscending;
+	else if(l1 > l2)
+		return NSOrderedDescending;
+	else
+		return NSOrderedSame;
+}
+
 @implementation FilterController
 
 +(FilterController *) sharedFilter {
@@ -130,6 +141,8 @@ static FilterController *_sharedFilter;
 			}
 		}
 	}
+	
+	results = [results sortedArrayUsingFunction:lengthSort context:NULL];
 	
 	[self setSearchResults:results];	
 }

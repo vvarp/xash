@@ -4,5 +4,4 @@
 -Remove the need for a help index file reference for flash 7/8
 -Resuming the page you were reading, after you have quit the program and run it again
 -cmd+f be for searching the current page and having cmd+opt+f for the book search (searchFor:direction:caseSensitive:wrap: for webview searches)
--Fix livedoc links (maybe just open in default browser)
 -Would like to be able to resize the text :) with a command + command  -

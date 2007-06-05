@@ -44,8 +44,6 @@
 
 - (void) windowWillClose:(NSNotification *)aNotification {
 	//this is very hackish.... remove in the future
-	SET_PREF_KEY_VALUE(XASH_FLASH_PATH_8_KEY, [oFlashPath stringValue]);
-	SET_PREF_KEY_VALUE(XASH_FLASH_INDEX_8_KEY, [oFlashIndex stringValue]);
 	[[NSUserDefaultsController sharedUserDefaultsController] save:self];
 }
 @end

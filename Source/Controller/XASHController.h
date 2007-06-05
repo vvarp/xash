@@ -21,9 +21,11 @@
 
 #define DEBUG 0
 
+#define XASH_FLASH_PATH_9 @"/Library/Application Support/Adobe/Flash CS3/en/Configuration/HelpPanel/Help/"
 #define XASH_FLASH_PATH_8 @"/Users/Shared/Library/Application Support/Macromedia/Flash 8/en/Configuration/HelpPanel/Help/"
 #define XASH_FLASH_PATH_7 @"/Users/Shared/Library/Application Support/Macromedia/Flash MX 2004/en/Configuration/HelpPanel/Help/"
 
+#define XASH_FLASH_INDEX_9 @"file:///Library/Application Support/Adobe/Flash CS3/en/Configuration/HelpPanel/Help/Welcome/Welcome_help.html"
 #define XASH_FLASH_INDEX_8 @"file:///Users/Shared/Library/Application%20Support/Macromedia/Flash%208/en/Configuration/HelpPanel/Help/Welcome/Welcome_help.html"
 #define XASH_FLASH_INDEX_7 @"file:///Users/Shared/Library/Application%20Support/Macromedia/Flash%20MX2004/en/Configuration/HelpPanel/Help/Welcome/Welcome_help.html"
 

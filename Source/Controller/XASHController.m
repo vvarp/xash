@@ -42,11 +42,6 @@ static XASHController *_sharedController;
 	//register default search paths
 	NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
 	
-	[defaults setValue:XASH_FLASH_PATH_8 forKey:XASH_FLASH_PATH_8_KEY];
-	[defaults setValue:XASH_FLASH_PATH_7 forKey:XASH_FLASH_PATH_7_KEY];
-	[defaults setValue:XASH_FLASH_INDEX_8 forKey:XASH_FLASH_INDEX_8_KEY];
-	[defaults setValue:XASH_FLASH_INDEX_7 forKey:XASH_FLASH_INDEX_7_KEY];
-	
 	[defaults setValue:[NSNumber numberWithBool:YES] forKey:CASE_INSENSITIVE_SEARCH];
 	[defaults setValue:[NSNumber numberWithBool:YES] forKey:AUTO_OPEN_HELP_WIN];
 	[defaults setValue:[NSNumber numberWithBool:YES] forKey:XASH_USE_LAST_BOOK];
@@ -63,14 +58,16 @@ static XASHController *_sharedController;
 //----------------------------
 - (void) configFlashVersion {
 	NSFileManager *manager = [NSFileManager defaultManager];
-	NSString *f8Path = PREF_KEY_VALUE(XASH_FLASH_PATH_8_KEY), *f7Path = PREF_KEY_VALUE(XASH_FLASH_PATH_7_KEY);
 
-	if([manager fileExistsAtPath:f8Path]) {
-		_helpPath = f8Path;
-		_helpIndex = PREF_KEY_VALUE(XASH_FLASH_INDEX_8_KEY);
-	} else if([manager fileExistsAtPath:f7Path]) {
-		_helpPath = f7Path;
-		_helpIndex = PREF_KEY_VALUE(XASH_FLASH_INDEX_7_KEY);
+	if([manager fileExistsAtPath:XASH_FLASH_PATH_9]) {
+		_helpPath = XASH_FLASH_PATH_9;
+		_helpIndex = XASH_FLASH_INDEX_9;
+	} else if([manager fileExistsAtPath:XASH_FLASH_PATH_8]) {
+		_helpPath = XASH_FLASH_PATH_8;
+		_helpIndex = XASH_FLASH_INDEX_8;
+	} else if([manager fileExistsAtPath:XASH_FLASH_PATH_7]) {
+		_helpPath = XASH_FLASH_PATH_7;
+		_helpIndex = XASH_FLASH_INDEX_7;
 	} else {//no flash help path found
 		_helpPath = nil;
 		//_helpIndex = nil;
